@@ -8,7 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('main-window') // notice this is changed since i changed the html in the public folders index.html
 );
 
 // If you want to start measuring performance in your app, pass a function
