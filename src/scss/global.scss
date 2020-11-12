@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    font-size: 64.5%;
+    color: #FFFFFF;
+}
+
+
+// main extension window
+#main-window {
+    position: fixed;
+    width: 25%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 10000;
+    background-color: #282C34;
+  }
