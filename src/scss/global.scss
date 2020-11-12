@@ -1,12 +1,12 @@
-* {
-    box-sizing: border-box;
-    font-size: 64.5%;
-    color: #FFFFFF;
-}
+// since this extension will be on other pages it would be unwise to do any styling outside the main-window
 
 
 // main extension window
 #main-window {
+    box-sizing: border-box;
+    font-size: 64.5%;
+    color: #FFFFFF;
+
     position: fixed;
     width: 25%;
     height: 100vh;
