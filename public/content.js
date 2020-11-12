@@ -1,22 +1,29 @@
+// the state of the extension
+let active = false;
 
 chrome.runtime.onMessage.addListener(function(request, sender, callback) {
-    console.log('here')
-    main();
+    if (request.message === "toggleState"){
+        active = !active;
+        toggle();
+    }
 })
 
-function main() {
+function toggle() {
     const extensionOrigin = `chrome-extension://${chrome.runtime.id}`;
-    
-    if (!location.ancestorOrigins.contains(extensionOrigin)) {
-        fetch(chrome.runtime.getURL('index.html') /* options can go here */)
-        .then(response => response.text())
-        .then(html => {
-            const styleStashHTML = html.replace(/\/static\//g, `${extensionOrigin}/static/`);
-            $(styleStashHTML).appendTo('body');
-        })
-        .catch(err => {
-            console.warn(err);
-        })
+    if (active) {
+        if (!location.ancestorOrigins.contains(extensionOrigin)) {
+            fetch(chrome.runtime.getURL('index.html') /* options can go here */)
+            .then(response => response.text())
+            .then(html => {
+                const reactHTML = html.replace(/\/static\//g, `${extensionOrigin}/static/`);
+                $(reactHTML).appendTo('body');
+            })
+            .catch(err => {
+                console.warn(err);
+            })
+        }
+    } else {
+        $('#main-window').detach(); // detach over remove since its a toggle button and the extension will be inserted and take out multiple times a session
     }
 }
 
