@@ -1,12 +1,16 @@
 .top-container {
     width: 90%;
     display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    
+    align-items: center;
+
     button {
         border-radius: 50% !important;
         width: 40px;
         height: 40px;
+    }
+
+    h1 {
+        color: #ffffff !important;
+        margin-top: 0 !important;
     }
 }
