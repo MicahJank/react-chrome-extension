@@ -8,7 +8,7 @@ const NotesFeed = () => {
     return (
         <div className="notes-feed-container">
             <Search />
-            {/* logic here for showing all notes */}
+            {/* logic here for showing all notes */} 
         </div> 
     )
 }
