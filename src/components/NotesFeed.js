@@ -9,7 +9,7 @@ const NotesFeed = () => {
         <div className="notes-feed-container">
             <Search />
             {/* logic here for showing all notes */} 
-        </div> 
+        </div>  
     )
 }
 
