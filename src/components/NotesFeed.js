@@ -3,7 +3,7 @@ import React from 'react';
 import Note from './Note.js';
 import Search from './Search.js';
 
-const NotesFeed = () => {
+const NotesFeed = () => { 
 
     return (
         <div className="notes-feed-container">
