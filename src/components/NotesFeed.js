@@ -13,4 +13,4 @@ const NotesFeed = () => {
     )
 }
 
-export default NotesFeed;
+export default NotesFeed; 
