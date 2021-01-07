@@ -13,23 +13,36 @@
     "128": "logo192.png" 
   },
   "background": {
-    "scripts": ["./jquery.js","background.js"]
+    "scripts": ["./jquery.js","background/background.js"],
+    "persistent": false
   },
   "content_scripts": [{
     "matches": ["<all_urls>"],
     "all_frames": true,
     "js": [
-      "./content.js",
+      "content/content.js",
       "./jquery.js"
     ],
     "run_at": "document_end"
   }],
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
+  "commands": {
+    "take-screenshot": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "Take Screenshot"
+    }
+  },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "web_accessible_resources": [
     "index.html",
-    "/static/*"
+    "/static/*",
+    "/images/Jcrop.gif",
+    "/images/pixel.png"
+    
   ] 
 } 
