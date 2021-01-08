@@ -21,7 +21,8 @@
     "all_frames": true,
     "js": [
       "content/content.js",
-      "./jquery.js"
+      "./jquery.Jcrop.min.js",
+      "./jquery.min.js"
     ],
     "run_at": "document_end"
   }],
