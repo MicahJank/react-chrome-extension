@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "My Extension",
-  "description": "This extension is a starting point to create a real Chrome extension",
+  "description": "This is a test chrome extension using react",
   "version": "0.0.1",
   "browser_action": {
     "default_title": "Open the popup"
@@ -21,8 +21,7 @@
     "all_frames": true,
     "js": [
       "content/content.js",
-      "./jquery.Jcrop.min.js",
-      "./jquery.min.js"
+      "./jquery.js"
     ],
     "run_at": "document_end"
   }],
